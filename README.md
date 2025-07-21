@@ -40,12 +40,14 @@ yarn add --dev @types/reveal.js typescript webpack webpack-cli ts-loader
 
 ### Webpack
 
+- dependency
+
 ```bash
 yarn add --dev html-webpack-plugin style-loader css-loader webpack-dev-server copy-webpack-plugin
 ```  
+- webpack.config.js
 
 ```json
-// webpack.config.js
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -120,6 +122,8 @@ deck.initialize().then(() => {
 ```  
 
 ### src/index.html
+
+- 외부 markdown 임포트
 
 ```html
 <!DOCTYPE html>
