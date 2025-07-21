@@ -1,4 +1,9 @@
-# HOW TO START
+# Reveal.js 끄적여보기
+
+## 감상
+
+- Markup 작성이 편한 경우 재미난 기능을 쓸 수 있는 것 같음.  
+- 지금은, Markdown으로 정리하고 싶어서 나중에 활용예정.
 
 ## SETUP
 
@@ -43,6 +48,7 @@ yarn add --dev html-webpack-plugin style-loader css-loader webpack-dev-server co
 // webpack.config.js
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: './src/index.ts',
@@ -94,11 +100,17 @@ module.exports = {
 import Reveal from 'reveal.js';
 import 'reveal.js/dist/reveal.css';
 import 'reveal.js/dist/theme/black.css';
+import RevealSearch from 'reveal.js/plugin/search/search.esm';
+import RevealZoom from 'reveal.js/plugin/zoom/zoom.esm'
+import RevealMarkdown from 'reveal.js/plugin/markdown/markdown.esm'
 
 // reveal.js 초기화
 const deck = new Reveal({
   hash: true,
   transition: 'slide',
+  plugins: [RevealSearch, RevealZoom, RevealMarkdown],
+  view: 'scroll',
+  scrollProgress: true,
   // 기타 설정 옵션들
 });
 

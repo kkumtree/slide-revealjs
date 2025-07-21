@@ -11,6 +11,8 @@ const deck = new Reveal({
   transition: 'slide',
   plugins: [RevealSearch, RevealZoom, RevealMarkdown],
   // 기타 설정 옵션들
+  view: 'scroll',
+  scrollProgress: true,
 });
 
 deck.initialize().then(() => {
