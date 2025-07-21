@@ -47,7 +47,7 @@ yarn add --dev html-webpack-plugin style-loader css-loader webpack-dev-server co
 ```  
 - webpack.config.js
 
-```json
+```javascript
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
